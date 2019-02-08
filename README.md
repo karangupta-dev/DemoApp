@@ -2,7 +2,7 @@
 
 Basic angular app
 
-###steps to install
+### Steps to install
 -download this app
 -unzip the folder
 -cd into the unzipped directory

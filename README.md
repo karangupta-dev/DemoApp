@@ -2,16 +2,11 @@
 
 Basic angular app
 
-### Steps to install
-
+###steps to install
 -download this app
-
 -unzip the folder
-
 -cd into the unzipped directory
-
 -run npm install
-
 -run ng serve
 
 

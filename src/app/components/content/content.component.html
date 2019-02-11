@@ -1,0 +1,29 @@
+<button (click)="toggle()">Toggle Text</button>
+<span *ngIf="toggleText">Sample text</span>
+
+<br>
+
+<span>Ng Model Example</span>
+<input type="text" [(ngModel)]="bindedText" />
+<span>{{bindedText}}</span>
+
+<br>
+<br>
+
+<h4>Request Examples</h4>
+<button (click)="getRequestExample()">GET </button> ||
+<button (click)="putRequestExample()">PUT </button> ||
+<button (click)="postRequestExample()">POST </button> ||
+<button (click)="deleteRequestExample()">DELETE </button> ||
+<button (click)="clearResponse()">CLEAR </button> 
+
+<br>
+<br>
+
+<span *ngIf='content'>{{content|json}}</span> 
+<br>
+<br>
+
+<div *ngFor="let user of content">
+    <span>{{user.first_name}}</span>
+</div>

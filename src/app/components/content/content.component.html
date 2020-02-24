@@ -1,11 +1,11 @@
-<button (click)="toggle()">Toggle Text</button>
-<span *ngIf="toggleText">Sample text</span>
+<!-- <button (click)="toggle()">Toggle Text</button>
+<span *ngIf="toggleText">Sample text</span> -->
 
 <br>
 
-<span>Ng Model Example</span>
+<!-- <span>Ng Model Example</span>
 <input type="text" [(ngModel)]="bindedText" />
-<span>{{bindedText}}</span>
+<span>{{bindedText}}</span> -->
 
 <br>
 <br>
@@ -15,15 +15,19 @@
 <button (click)="putRequestExample()">PUT </button> ||
 <button (click)="postRequestExample()">POST </button> ||
 <button (click)="deleteRequestExample()">DELETE </button> ||
-<button (click)="clearResponse()">CLEAR </button> 
+<button (click)="clearResponse()">CLEAR </button>
 
 <br>
 <br>
 
-<span *ngIf='content'>{{content|json}}</span> 
+<span *ngIf="content">{{content|json}}</span>
 <br>
 <br>
 
-<div *ngFor="let user of content">
+<ng-template *ngIf="content?.content">
+  <div *ngFor="let user of content">
     <span>{{user.first_name}}</span>
-</div>
+  </div>
+</ng-template>
+
+

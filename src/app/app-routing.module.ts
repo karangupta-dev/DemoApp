@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ContentComponent } from './components/content/content.component';
 
 const routes: Routes = [
-  { path: 'content', component: ContentComponent },
+  { path: '', component: ContentComponent },
 ];
 
 @NgModule({
@@ -11,5 +11,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
- 
+
  }

@@ -11,8 +11,8 @@ export class AppComponent {
 
   constructor(public router:Router){}
 
-  public openContentComponent(){
-      this.router.navigate(['content']);
-  }
+  // public openContentComponent(){
+  //     this.router.navigate(['content']);
+  // }
 
 }

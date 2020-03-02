@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Helper } from 'src/app/helper/helper';
+import { RequestObject } from '../../model/requestObject';
 
 @Component({
   selector: 'app-content',
@@ -10,12 +11,15 @@ export class ContentComponent implements OnInit {
 
   private toggleText: boolean;
 
-  public content: string;
+  public content: string="Hello";
 
-  constructor(public helper: Helper) { }
+  public requestObject: RequestObject;
 
-  ngOnInit() {
+  constructor(public helper: Helper) {
+    this.requestObject= new RequestObject();
   }
+
+  ngOnInit() { }
 
   public toggle() {
     this.toggleText = !this.toggleText;
@@ -34,7 +38,7 @@ export class ContentComponent implements OnInit {
   }
 
   public postRequestExample() {
-    this.helper.postRequest().subscribe((response) => {
+    this.helper.postRequest(this.requestObject).subscribe((response) => {
       this.content = response;
     });
   }

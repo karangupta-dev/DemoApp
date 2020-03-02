@@ -25,11 +25,14 @@ export class Helper {
         });
     }
 
-    public postRequest() {
+    public postRequest(params) {
         return this.apiService.callApiService({
             requestType: REQUEST_TYPE_POST,
-            url: `https://reqres.in/api/users`,
-            body:JSON.stringify({"name": "morpheus","job": "leader"}),
+            // url: `https://reqres.in/api/users`,
+            // body:JSON.stringify({"name": "morpheus","job": "leader"}),
+            url: `http://osbeadevinternal.ncr.com/int/ERP/Customer/Services/CustomerDataRS`,
+            body:JSON.stringify(params),
+            responseType: 'json',
             shouldBlock: false,
         });
     }
